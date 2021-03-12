@@ -1,0 +1,343 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <meta name=viewport content="width=800">
+  <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
+  <style type="text/css">
+    /* Color scheme stolen from Sergey Karayev */
+
+    a {
+      color: #1772d0;
+      text-decoration: none;
+    }
+
+    a:focus,
+    a:hover {
+      color: #f09228;
+      text-decoration: none;
+    }
+
+    body,
+    td,
+    th,
+    tr,
+    p,
+    a {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px
+    }
+
+    strong {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 14px;
+    }
+
+    red {
+      color: #FF0000;
+    }
+
+    heading {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 22px;
+    }
+
+    papertitle {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 17px;
+      font-weight: 700
+    }
+
+    name {
+      font-family: 'Lato', Verdana, Helvetica, sans-serif;
+      font-size: 32px;
+    }
+
+    .one {
+      width: 180px;
+      height: 180px;
+      position: relative;
+    }
+
+    .two {
+      width: 180px;
+      height: 180px;
+      position: absolute;
+      /*
+	  top: 50%;
+	  left: 50%;
+	  -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
+      */
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+
+    .fade {
+      transition: opacity .2s ease-in-out;
+      -moz-transition: opacity .2s ease-in-out;
+      -webkit-transition: opacity .2s ease-in-out;
+    }
+
+    span.highlight {
+      background-color: #ffffd0;
+    }
+  </style>
+  <!-- <link rel="icon" type="image/png" href="images/seal_icon.png"> -->
+  <title>Kelvin C.K. Chan</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet'
+    type='text/css'>
+</head>
+
+<body>
+  <table
+    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr style="padding:0px">
+                <td style="padding:2.5%;width:63%;vertical-align:middle">
+                  <p style="text-align:center">
+                    <name>Kelvin C.K. Chan</name>
+                  </p>
+                  <p>I am currently a third-year Ph.D. student in Nanyang Technological University. I am supervised by
+                    Prof. Chen Change Loy. Previously, I received my M.Phil.
+                    degree in Mathematics from The Chinese University of Hong Kong in 2018.
+                  </p>
+
+
+                  <p style="text-align:center">
+                    <a href="mailto:kelvinckchan@outlook.com">Email</a> &nbsp/&nbsp
+                    <a href="https://scholar.google.com.sg/citations?user=QYTu_KQAAAAJ&hl=en">Google Scholar</a>
+                    &nbsp/&nbsp
+                    <a href="https://github.com/ckkelvinchan/"> GitHub </a>
+                  </p>
+                </td>
+                <td width="33%">
+                  <img src="images/KelvinChan.jpg" width="320">
+                </td>
+              </tr>
+          </table>
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tr>
+              <td width="100%" valign="middle">
+                <heading>News</heading>
+                <p>
+                  <li>[03/2021] Three papers accepted to CVPR21 (1 Oral, 2 Posters).</li>
+                  <li>[12/2020] One paper accepted to AAAI21.</li>
+                </p>
+
+              </td>
+            </tr>
+          </table>
+
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tr>
+              <td width="100%" valign="middle">
+                <heading>Research</heading>
+                <p>
+                  My current research interest focuses on computer vision, especially image and video restoration.
+                </p>
+              </td>
+            </tr>
+          </table>
+
+          <!-- GLEAN 2021 CVPR -->
+          <table width="%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tr onmouseout="glean_stop()" onmouseover="glean_start()">
+              <td width="25%">
+                <div class="one" align="center">
+                  <div class="two" id='glean_image'><img src='images/GLEAN_HR.png' width="210"></div>
+                  <img src='images/GLEAN_LR.png' width="210">
+                </div>
+                <script type="text/javascript">
+                  function glean_start() {
+                    document.getElementById('glean_image').style.opacity = "1";
+                  }
+
+                  function glean_stop() {
+                    document.getElementById('glean_image').style.opacity = "0";
+                  }
+                  glean_stop()
+                </script>
+              </td>
+              <td valign="middle" width="75%">
+                <papertitle>GLEAN: Generative Latent Bank for Large-Factor Image Super-Resolution</papertitle>
+                <br><br>
+                <strong>Kelvin C.K. Chan</strong>,
+                <a href="https://xinntao.github.io">Xintao Wang</a>,
+                <a href="https://sites.google.com/view/xiangyuxu">Xiangyu Xu</a>,
+                <a href="https://www.gujinwei.org/">Jinwei Gu</a>,
+                <a href="http://personal.ie.cuhk.edu.hk/~ccloy/">Chen Change Loy</a>
+                <br>
+                <em>CVPR, 2021 </em>
+                <font color="red">
+                  <strong>(Oral)</strong>
+                </font>
+                <br>
+                [ <a href=https://arxiv.org/abs/2012.00739>Paper (arXiv) </a> ] [ <a
+                  href=https://ckkelvinchan.github.io/papers/glean.pdf>Paper (High-Res) </a> ] [ <a
+                  href=https://ckkelvinchan.github.io/projects/GLEAN>Project Page </a> ] [ <a
+                  href=https://ckkelvinchan.github.io>Codes (coming soon) </a> ]
+              </td>
+            </tr>
+          </table>
+          <p style="margin-bottom:1cm;"></p>
+
+          <!-- BasicVSR 2021 CVPR -->
+          <table width="%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tr>
+              <td width="25%">
+                <div class="one" align="center">
+                  <img src='images/BasicVSR.png' width="210">
+                </div>
+              </td>
+              <td valign="middle" width="75%">
+                <papertitle>BasicVSR: The Search for Essential Components in Video Super-Resolution and Beyond
+                </papertitle>
+                <br><br>
+                <strong>Kelvin C.K. Chan</strong>,
+                <a href="https://xinntao.github.io">Xintao Wang</a>,
+                <a href="https://yuke93.github.io">Ke Yu</a>,
+                <a href="https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN">Chao Dong</a>,
+                <a href="http://personal.ie.cuhk.edu.hk/~ccloy/">Chen Change Loy</a>
+                <br>
+                <em>CVPR, 2021 </em>
+                <br>
+                [ <a href=https://arxiv.org/abs/2012.02181>Paper (arXiv) </a> ] [ <a
+                  href=https://ckkelvinchan.github.io/projects/BasicVSR>Project Page </a> ][ <a
+                  href=https://github.com/ckkelvinchan/BasicVSR-IconVSR>Codes </a> ]
+              </td>
+            </tr>
+          </table>
+
+          <!-- C2 Matching 2021 CVPR -->
+          <table width="%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tr onmouseout="glean_stop()" onmouseover="glean_start()">
+              <td width="25%">
+                <div class="one" align="center">
+                  <img src='images/C2Matching.png' width="210">
+                </div>
+              </td>
+              <td valign="center" width="65%">
+                <papertitle>Robust Reference-based Super-Resolution via C&sup2;-Matching</papertitle>
+                <br><br>
+                Yuming Jiang,
+                <strong>Kelvin C.K. Chan</strong>,
+                <a href="https://xinntao.github.io">Xintao Wang</a>,
+                <a href="http://personal.ie.cuhk.edu.hk/~ccloy/">Chen Change Loy</a>,
+                <a href="https://liuziwei7.github.io/">Ziwei Liu</a>
+                <br>
+                <em>CVPR, 2021 </em>
+                <br>
+                [ <a href=https://ckkelvinchan.github.io /> Paper (coming soon) </a> ]
+              </td>
+            </tr>
+          </table>
+          <p style="margin-bottom:1cm;"></p>
+
+          <!-- Understanding Deformable Alignment 2021 AAAI -->
+          <table width="%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tr>
+              <td width="25%">
+                <div class="one" align="center">
+                  <img src='images/DCN.png' width="210">
+                </div>
+              </td>
+              <td valign="middle" width="75%">
+                <papertitle>Understanding Deformable Alignment in Video Super-Resolution</papertitle>
+                <br><br>
+                <strong>Kelvin C.K. Chan*</strong>,
+                <a href="https://xinntao.github.io">Xintao Wang</a>*,
+                <a href="https://yuke93.github.io">Ke Yu</a>,
+                <a href="https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN">Chao Dong</a>,
+                <a href="http://personal.ie.cuhk.edu.hk/~ccloy/">Chen Change Loy</a>
+                <br>
+                <em>AAAI, 2021 </em>
+                <br>
+                <em>* Equal contribution</em>
+                <br>
+                [ <a href=https://arxiv.org/abs/2009.07265>Paper (arXiv) </a> ]
+              </td>
+            </tr>
+          </table>
+          <p style="margin-bottom:1cm;"></p>
+
+          <!-- EDVR 2019 CVPRW -->
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tr>
+              <td width="25%">
+                <div class="one" align="center">
+                  <img src='images/EDVR.png' width="210">
+                </div>
+              </td>
+              <td valign="middle" width="75%">
+                <papertitle>EDVR: Video Restoration with Enhanced Deformable Convolutional Networks</papertitle>
+                <br><br>
+                <a href="https://xinntao.github.io">Xintao Wang</a>,
+                <strong>Kelvin C.K. Chan</strong>,
+                <a href="https://yuke93.github.io">Ke Yu</a>,
+                <a href="https://scholar.google.com.hk/citations?user=OSDCB0UAAAAJ&hl=zh-CN">Chao Dong</a>,
+                <a href="http://personal.ie.cuhk.edu.hk/~ccloy/">Chen Change Loy</a>
+                <br>
+                <em>CVPRW, 2019 </em>
+                <br>
+                <em><b>Champions</b>, NTIRE 2019 Challenges on Video Restoration and Enhancement</em>
+                <br>
+                [ <a href=https://arxiv.org/abs/1905.02716>Paper (arXiv) </a> ] [ <a
+                  href=https://xinntao.github.io/projects/EDVR>Project Page</a> ] [ <a
+                  href=https://github.com/xinntao/EDVR>Codes </a>] <br>
+              </td>
+            </tr>
+          </table>
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tr>
+            </tr>
+          </table>
+          <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+            <tr>
+              <td width="100%" valign="middle">
+                <heading>Academic Service</heading>
+                <p>
+                  <li>Conference reviewer: AAAI, CVPR </li>
+                  <li>Journal reviewer: IJCV</li>
+                </p>
+              </td>
+            </tr>
+          </table>
+      </tr>
+    </tbody>
+  </table>
+
+  <br><br><br>
+  <script type='text/javascript' id='clustrmaps'
+    src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=KQpsaGlkypYsAmMxlVpnGctoogCvQgRJc5VcKTkFdzc'></script>
+
+  <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+    <tr>
+      <td>
+        <br>
+        <p align="right">
+          <font size="2">
+            Thanks <a href="https://jonbarron.info/">Jon Barron</a> for sharing the <a
+              href=https://github.com/jonbarron/website>website codes</a>.
+          </font>
+        </p>
+      </td>
+    </tr>
+  </table>
+
+
+
+  </td>
+  </tr>
+  </table>
+</body>
+
+</html>
