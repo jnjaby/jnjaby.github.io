@@ -108,6 +108,7 @@ name {
 .one {
   width: 160px;
   height: 160px;
+  margin-right: 30px;
   position: relative;
 }
 
