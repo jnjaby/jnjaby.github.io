@@ -544,3 +544,8 @@ img.hover-shadow {
 .hover-shadow:hover {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.36)
 }
+
+.link-block a {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
