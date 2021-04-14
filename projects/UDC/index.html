@@ -181,13 +181,22 @@
       <div class="section" , id="Dataset">
         <h2>Dataset</h2>
         <p>
-          We provide both the synthetic and real dataset for Under-Display Camera Images. Train and validation subsets are publicly available. Downloads are available via Google Drive or running the python code. The released dataset can only be used for research purposes.
+          We provide both the synthetic and real dataset for Under-Display Camera Images. Train and validation subsets are publicly available. Downloads are available via Google Drive or running the python code.
         </p>
         <p>
           For synthetic data, we gather 2016 HDR patches of size [800, 800, 3] for training and 360 pairs for testing. Since these patches are reprojected and cropped from the 360-degree panorama, they may exhibit some overlap contents (but in different perspective view). Image values are ranging from [0, 500] and constructed in '.npy' form. For each of the crops, we release the ground-truth iamges and you can simulate the corresponding degraded image with calibrated PSFs by running the code. 
         </p>
         <p>
           For real data, we release 30 HDR images of size [3264, 2448, 3] using ZTE phone. Similarly, image values are ranging from [0, 16] and constructed in '.npy' form. Images are in linear domain and are not processed by the built-in ISP of the phone. We provide a simple pipeline of post-processing for better visulization. The camera output of the phone (after ISP) are also released for reference and color correction pipeline.
+        </p>
+      </div>
+
+
+      <!--=================License==========================-->
+      <div class="section" , id="License">
+        <h2>License</h2>
+        <p>
+          The dataset is made available for academic research purpose only. All the images from synthetic dataset are collected from the Internet, and the copyright belongs to the original owners. If any of the images belongs to you and you would like it removed, kindly inform us, we will remove it from our dataset immediately. The real dataset is collected and uploaded by us. We retain all the copyrights of them.
         </p>
       </div>
 
