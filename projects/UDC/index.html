@@ -154,21 +154,21 @@
             <td width="30%">
               <center>
                 <a href="https://jnjaby.github.io/projects/UDC" target="_blank" class="imageLink"><img
-                    src="./src/thumbnail.png" , width="51%"></a><br><br>
+                    src="./src/thumbnail.png" , height="120"></a><br>
                 <a href="https://jnjaby.github.io/projects/UDC" disabled target="_blank">Paper (coming soon)</a>
               </center>
             </td>
             <td width="30%">
               <center>
                 <a href="https://jnjaby.github.io/projects/UDC" target="_blank" class="imageLink"><img
-                    src="../icon_dataset.png" , width="51%"></a><br><br>
-                <a href="https://jnjaby.github.io/projects/UDC" target="_blank">Data (coming soon)</a>
+                    src="../icon_dataset.png" , height="120"></a><br>
+                <a href="https://jnjaby.github.io/projects/UDC" target="_blank">Data</a>
               </center>
             </td>
             <td width="30%" valign="middle">
               <center>
                 <a href="https://jnjaby.github.io/projects/UDC" target="_blank" class="imageLink"><img
-                    src="../icon_github.png" , width="50%"></a><br><br>
+                    src="../icon_github.png" , height="120"></a><br>
                 <a href="https://jnjaby.github.io/projects/UDC" target="_blank">Codes (coming soon)</a>
               </center>
             </td>
@@ -181,10 +181,13 @@
       <div class="section" , id="Dataset">
         <h2>Dataset</h2>
         <p>
-          We provide both the synthetic and real dataset for Under-Display Camera Images. Train and validation subsets are publicly available. The dataset can be downloaded by running the python code or clicking the links below. Downloads are available via Google Drive and SNU CVLab server.
-
-
-          The released dataset can only be used for research purposes.
+          We provide both the synthetic and real dataset for Under-Display Camera Images. Train and validation subsets are publicly available. Downloads are available via Google Drive or running the python code. The released dataset can only be used for research purposes.
+        </p>
+        <p>
+          For synthetic data, we gather 2016 HDR patches of size [800, 800, 3] for training and 360 pairs for testing. Since these patches are reprojected and cropped from the 360-degree panorama, they may exhibit some overlap contents (but in different perspective view). Image values are ranging from [0, 500] and constructed in '.npy' form. For each of the crops, we release the ground-truth iamges and you can simulate the corresponding degraded image with calibrated PSFs by running the code. 
+        </p>
+        <p>
+          For real data, we release 30 HDR images of size [3264, 2448, 3] using ZTE phone. Similarly, image values are ranging from [0, 16] and constructed in '.npy' form. Images are in linear domain and are not processed by the built-in ISP of the phone. We provide a simple pipeline of post-processing for better visulization. The camera output of the phone (after ISP) are also released for reference and color correction pipeline.
         </p>
       </div>
 
