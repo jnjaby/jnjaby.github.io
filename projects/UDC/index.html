@@ -84,8 +84,10 @@
         <!--=================Tabs==========================-->
         <ul id="tabs">
           <li><a href="#abstract" name="#tab1">Abstract</a></li>
-          <li><a href="#materials" name="#tab2">Materials</a></li>
-          <li><a href="#citation" name="#tab3">Citation</a></li>
+          <li><a href="#dataset" name="#tab2">Dataset</a></li>
+          <li><a href="#method" name="#tab3">Method</a></li>
+          <li><a href="#results" name="#tab4">Results</a></li>
+          <li><a href="#citation" name="#tab5">Citation</a></li>
       </div>
       <br>
       <!--=================Teasers==========================-->
@@ -112,10 +114,12 @@
           <td style="padding:0 10px 10px 10px;">			  
             <img src="src/syn_LQ6.png" onmouseover="this.src='src/syn_GT6.png';" onmouseout="this.src='src/syn_LQ6.png';" height="280" width="280">
           </td>
-          </tr>	  
-          
-        </tbody></table>
+          </tr></tbody></table>
         </div>
+        <p align="center">
+          <b>MouseOut</b>: Degraded images&emsp;&emsp;&emsp;&emsp;
+          <b>MouseOver</b>: Restored results
+        </p>
       </div>
 
       <!--=================Abstract==========================-->
@@ -141,14 +145,14 @@
           method through extensive experiments on both synthetic and
           real UDC data. Our physics-based image formation model and proposed DISCNet can provide foundations for further exploration in UDC image restoration, and even for general diffraction artifact removal in a broader sense.
         </p>
-        <div style="text-align: center; vertical-align:middle">
-          <img src="src/schematic.png" width="880">
-        </div>
       </div>
+
+
 
       <!--=================Materials==========================-->
       <div class="section materials" , id="materials">
         <h2>Materials</h2>
+        <br>
         <table width="100%" align="center" border=none cellspacing="0" cellpadding="30">
           <tr>
             <td width="30%">
@@ -160,16 +164,16 @@
             </td>
             <td width="30%">
               <center>
-                <a href="https://jnjaby.github.io/projects/UDC" target="_blank" class="imageLink"><img
+                <a href="https://github.com/jnjaby/DISCNet/tree/main/datasets" target="_blank" class="imageLink"><img
                     src="../icon_dataset.png" , height="120"></a><br>
-                <a href="https://jnjaby.github.io/projects/UDC" target="_blank">Data</a>
+                <a href="https://github.com/jnjaby/DISCNet/tree/main/datasets" target="_blank">Data</a>
               </center>
             </td>
             <td width="30%" valign="middle">
               <center>
-                <a href="https://jnjaby.github.io/projects/UDC" target="_blank" class="imageLink"><img
+                <a href="https://github.com/jnjaby/DISCNet" target="_blank" class="imageLink"><img
                     src="../icon_github.png" , height="120"></a><br>
-                <a href="https://jnjaby.github.io/projects/UDC" target="_blank">Codes (coming soon)</a>
+                <a href="https://github.com/jnjaby/DISCNet" target="_blank">Codes</a>
               </center>
             </td>
           </tr>
@@ -177,8 +181,32 @@
       </div>
     </div>
 
+
+      <!--=================What is UDC==========================-->
+      <div class="section" , id="UDC">
+        <h2>What is UDC?</h2>
+        <div style="text-align: center; vertical-align:middle">
+          <img src="src/schematic.png" width="880">
+        </div>
+        <p>
+          As the above figure shows,
+          a typical UDC system has the camera module placed underneath
+          and closely attached to the semi-transparent Organic
+          Light-Emitting Diode (OLED) display. Although the
+          display looks partially transparent, the regions where the
+          light can pass through, i.e. the gaps between the display pixels,
+          are usually in the micrometer scale, which substantially
+          diffracts the incoming light, affecting the light propagation from the scene to the sensor.
+          In particular, the light emitted from a point light
+          source is modulated by the OLED and camera lens, before being
+          captured by the sensor.
+          The UDC systems introduce a new class of complex image degradation problems, combining <strong>flare</strong>, <strong>haze</strong>, <strong>blur</strong>, and <strong>noise</strong>. On the right there is a simulated example of the image formation model with a real-captured PSF.
+        </p>
+      </div>
+
+
       <!--=================Dataset==========================-->
-      <div class="section" , id="Dataset">
+      <div class="section" , id="dataset">
         <h2>Dataset</h2>
         <p>
           We provide both the synthetic and real dataset for Under-Display Camera Images. Train and validation subsets are publicly available. Downloads are available via Google Drive or running the python code.
@@ -191,6 +219,72 @@
         </p>
       </div>
 
+
+      <!--=================Method==========================-->
+      <div class="section" , id="method">
+        <h2>Method</h2>
+        <div style="text-align: center; vertical-align:middle">
+          <img src="src/architecture.png" width="730">
+        </div>
+        <div align="center">
+          Overview of our proposed Dynamic Skip Connection Network (DISCNet).
+        </div>
+        <p>
+           The main restoration branch consists of an encoder and a decoder, with feature maps propagated and transformed by DISCNet through skip connections. DISCNet applies multi-scale dynamic convolutions using generated filters conditioned on PSF kernel code and spatial information from input images.
+        </p>
+      </div>
+
+
+      <!--=================Results==========================-->
+      <div class="section" , id="results">
+        <h2>Results</h2>
+        <br>
+        <table>
+          <tr>
+            <div style="text-align: center; vertical-align:middle">
+              <img src="src/syn_visual_result.png" width="780">
+            </div>
+          </tr>
+          <tr>
+            <div style="text-align: center; vertical-align:middle">
+              <img src="src/syn_plant.png" width="780">
+            </div>
+          </tr>
+          <tr>
+            <div style="text-align: center; vertical-align:middle">
+              <img src="src/syn_shanghai2.png" width="780">
+            </div>
+          </tr>
+          <tr>
+            <div align="center">
+              Visual results on synthetic data.
+            </div>    
+          </tr>
+        </table>
+        <br><br>
+        <table>
+          <tr>
+            <div style="text-align: center; vertical-align:middle">
+              <img src="src/real_vusual_result.png" width="780">
+            </div>
+          </tr>
+          <tr>
+            <div style="text-align: center; vertical-align:middle">
+              <img src="src/real_cafe.png" width="780">
+            </div>
+          </tr>
+          <tr>
+            <div style="text-align: center; vertical-align:middle">
+              <img src="src/real_canteen2.png" width="780">
+            </div>
+          </tr>
+          <tr>
+            <div align="center">
+              Visual results on real data.
+            </div>    
+          </tr>
+        </table>
+      </div>
 
       <!--=================License==========================-->
       <div class="section" , id="License">
