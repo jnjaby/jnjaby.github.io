@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+<h2>Data Processing</h2>
+<p>Both input and Ground Truth data are high dynamic range. For evaluation, all measurements are computed in tonemapped images (Modified Reinhard). The tone mapping operation can be expressed as f(x) = x / (x+0.25).<br /> Please refer to the tone_map function in evaluate.py of <a href="https://codalab.lisn.upsaclay.fr/my/datasets/download/b549bbbf-7c4e-4ada-bdfb-429523bac284"> scoring program</a>.</p>
+<h2>Data Download</h2>
+<p>The training split contains 2016 pairs of 800*800*3 images. Image values are ranging from [0, 500] and constructed in '.npy' form. Validation set and testing set consist of 40 and 40 pairs of images, respectively. The input images from validation and testing set are provided and the GT are not available to participants. The validation server will be ended when the tesing phase begins.</p>
+<ul>
+<li>UDC Training Images (pairs) <a href="https://drive.google.com/file/d/1bbIy5P_aP_xarxUw4yPuPk4CglHPGLco/view?usp=sharing"> [Google Drive]</a></li>
+<li>UDC Validation Images (input) <a href="https://drive.google.com/file/d/1JH7CQ77wjkV0Xnp14l8u4bqJF0ENGMqp/view?usp=sharing"> [Google Drive]</a></li>
+<li>UDC Testing Images (input) (will be available at tesing phase)</li>
+</ul>
+<h2>Submission</h2>
+<p>For submitting the results, you need to follow these steps:</p>
+<ol type="1">
+<li><strong>Process the input images</strong>&nbsp;and keep the same name for the output image results as produced by your method (example: for an input file with name "001.npy" the output file should also be "001.npy")&nbsp;<br />Note that the output HDR images should be saved as '.npy' and should have the same size of the input images.</li>
+<li>The&nbsp;<strong>readme.txt</strong>&nbsp;file should contain the following lines filled in with the runtime per image (in seconds) of the solution, the number of model parameters, and 1 or 0 if employs extra data for training the models or not.<br /><code>Runtime per image [s] : <span>0.10</span></code>&nbsp;<br /><code>Parameters :&nbsp;<span>1050290</span></code><br /><code>Extra Data [1] / No Extra Data [0] : 1</code><br /><code>Other description :&nbsp;<span>GPU: Titan Xp; Extra data: DF2K</span>&nbsp;</code><br />The last part of the file can have any description you want about the code producing the provided results (dependencies, link, scripts, etc.)<br />The provided information is very important both during the validation period when different teams can compare their results / solutions but also for establishing the final ranking of the teams and their methods.</li>
+<li>Create a&nbsp;<strong>ZIP</strong>&nbsp;archive containing all the output image results named as above and a&nbsp;<strong>readme.txt</strong>. Note that the archive should not include folders, all the images/files should be in the root of the archive.</li>
+</ol>
+<p>We recommend you use our <a href="https://codalab.lisn.upsaclay.fr/my/datasets/download/b549bbbf-7c4e-4ada-bdfb-429523bac284"> [scoring program]</a> to check your submission is correct.</p>
+<h2>Final Submission</h2>
+<p>Participants will need to submit results on Codalab server. The submission format is the same as the validation phase's.</p>
+<p>Apart from submission on Codalab server, all participants should email to the challenge organizer <a href="mailto:mipi.challenge@gmail.com"> mipi.challenge@gmail.com</a> to complete the final submission.</p>
+<p>The subject of the email should be: UDC MIPI-Challenge - TEAM_NAME</p>
+<p>The body of the mail shall include the following information:<br /> a) the challenge name<br /> b) team name<br /> c) team leader's name and email address<br /> d) rest of the team members<br /> e) team name and user names on UDC CodaLab competitions<br /> f) executable/source code attached or download links<br /> g) Each team in the final testing phase should write up a factsheet to describe their solution(s) <a href="https://codalab.lisn.upsaclay.fr/my/datasets/download/f1f13084-00d4-4ed5-8250-7763102e93d3"> [factsheet template]</a><br /> h) download link to the results of all of the test frames</p>
+<p>Note that the executable/source code should include pre-trained models or necessary parameters so that we could run it and reproduce results. There should be a README or descriptions that explain how to execute the executable/code. Factsheet must be a compiled pdf file. Please provide a detailed explanation.</p>
+    </main>
+    <footer></footer>
+  </body>
+</html>

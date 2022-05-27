@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+<h2>Data Processing</h2>
+<p>For data processing details, please refer to <a href="https://drive.google.com/drive/folders/1ES-4tpABicXmbNokYpF0KlI_q6VUwzaX">Quad Joint Remosaic and Denoise dataset</a>.</p>
+<h2>Data Download</h2>
+<p>The training data contains 70 pairs of input Quad and output bayer raw data. Both Quad input and ground truth bayer are of the same spatial resolution: 1200x1800, and they are of 10bits in the .bin format. The validation and testing set has 15 scenes each. For each scene in the training, validation and testing dataset, we have three noise levels: 0dB, 24dB and 42dB, and therefore the total number of images is 210, 45 and 45 for the training, validation and testing dataset. The input images from the validation and testing set are provided but the GT are not available to participants.</p>
+<table border="1">
+<thead>
+<tr><th class="tg-nrix" style="text-align: center;">Dataset split</th><th class="tg-nrix" style="text-align: center;">Noise level</th><th class="tg-nrix" style="text-align: center;">Input</th><th class="tg-nrix" style="text-align: center;">Output bayer (to submit)</th><th class="tg-nrix" style="text-align: center;">ID</th><th class="tg-nrix" style="text-align: center;"># of images</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>train</td>
+<td>0dB</td>
+<td>quad_$ID_fullres_0db.bin</td>
+<td>quad_$ID_fullres_0db.bin</td>
+<td>001-070</td>
+<td style="text-align: center;">70</td>
+</tr>
+<tr>
+<td>train</td>
+<td>24dB</td>
+<td>quad_$ID_fullres_24db.bin</td>
+<td>quad_$ID_fullres_24db.bin</td>
+<td>001-070</td>
+<td style="text-align: center;">70</td>
+</tr>
+<tr>
+<td>train</td>
+<td>42dB</td>
+<td>quad_$ID_fullres_42db.bin</td>
+<td>quad_$ID_fullres_42db.bin</td>
+<td>001-070</td>
+<td style="text-align: center;">70</td>
+</tr>
+<tr>
+<td>validation</td>
+<td>0dB</td>
+<td>quad_$ID_fullres_0db.bin</td>
+<td>quad_$ID_fullres_0db.bin</td>
+<td>071-085</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td>validation</td>
+<td>24dB</td>
+<td>quad_$ID_fullres_24db.bin</td>
+<td>quad_$ID_fullres_24db.bin</td>
+<td>071-085</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td>validation</td>
+<td>42dB</td>
+<td>quad_$ID_fullres_42db.bin</td>
+<td>quad_$ID_fullres_42db.bin</td>
+<td>071-085</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td>test</td>
+<td>0dB</td>
+<td>quad_$ID_fullres_0db.bin</td>
+<td>quad_$ID_fullres_0db.bin</td>
+<td>086-100</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td>test</td>
+<td>24dB</td>
+<td>quad_$ID_fullres_24db.bin</td>
+<td>quad_$ID_fullres_24db.bin</td>
+<td>086-100</td>
+<td style="text-align: center;">15</td>
+</tr>
+<tr>
+<td>test</td>
+<td>42dB</td>
+<td>quad_$ID_fullres_42db.bin</td>
+<td>quad_$ID_fullres_42db.bin</td>
+<td>086-100</td>
+<td style="text-align: center;">15</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p>More details can be found in the README.md in <a href="https://drive.google.com/file/d/1H0tR0WZva-VQHutBpLD9KgTiO8jBsOyH/view?usp=sharing"> quad_rmsc_start_here.zip</a> in the training dataset</p>
+<ul>
+<li>Quad Joint Remosaic and Denoise dataset (Training) <a href="https://drive.google.com/drive/folders/1ES-4tpABicXmbNokYpF0KlI_q6VUwzaX"> [Google Drive]</a></li>
+<li>Quad Joint Remosaic and Denoise dataset (Validation) <a href="https://drive.google.com/drive/folders/1sCdoetAQ1UKubd1XmcZq8DLsUl0JoEd4"> [Google Drive]</a></li>
+<li>Quad Joint Remosaic and Denoise dataset (Testing) [Coming soon]</li>
+</ul>
+<h2>Submission</h2>
+<p>For submitting the results, you need to follow these steps:</p>
+<ol type="1">
+<li><strong>Process the input images</strong>&nbsp;and keep the same name for the output image results as produced by your method (example: for an input file with name "001.bin" the output file should also be "001.bin")&nbsp;</li>
+<li>The input images for both the validation and test datasets have three different noise levels. Therefore, the total number of images to submit is 45 for the validation and test dataset respectively.</li>
+<li>The&nbsp;<strong>readme.txt</strong>&nbsp;file should contain the following lines filled in with the runtime per image (in seconds) of the solution.<br /><code>Runtime per image [s] : <span>0.10</span></code>&nbsp;<br /><code>Other description :&nbsp;<span>GPU: Titan Xp; </span>&nbsp;</code><br />The last part of the file can have any description you want about the code producing the provided results (dependencies, link, scripts, etc.). The provided information is very important both during the validation period when different teams can compare their results / solutions but also for establishing the final ranking of the teams and their methods.</li>
+<li>Create a&nbsp;<strong>ZIP</strong>&nbsp;archive containing all the output image results named as above and a&nbsp;<strong>readme.txt</strong>. Note that the archive should not include folders, all the images/files should be in the root of the archive.</li>
+</ol>
+<p>Note that the submission score shown on "Submit/View Results" tab is not the final ranking. See the evaluation page for our weighted metric for the final score.</p>
+<p>We recommend you use our <a href="https://drive.google.com/drive/folders/1ES-4tpABicXmbNokYpF0KlI_q6VUwzaX"> [scoring program]</a> to check your submission is correct.</p>
+<h2>Final Submission</h2>
+<p>Participants will need to submit results on Codalab server. The submission format is the same as the validation phase's.</p>
+<p>Apart from submission on Codalab server, all participants should email to the challenge organizer <a href="mailto:mipi.challenge@gmail.com"> mipi.challenge@gmail.com</a> to complete the final submission.</p>
+<p>The subject of the email should be: Quad Joint Remosaic and Denoise MIPI-Challenge - TEAM_NAME</p>
+<p>The body of the mail shall include the following information:<br /> a) the challenge name<br /> b) team name<br /> c) team leader's name and email address<br /> d) rest of the team members<br /> e) team name and user names on UDC CodaLab competitions<br /> f) executable/source code attached or download links<br /> g) Each team in the final testing phase should write up a factsheet to describe their solution(s) <a href="https://codalab.lisn.upsaclay.fr/my/datasets/download/f1f13084-00d4-4ed5-8250-7763102e93d3"> [factsheet template]</a><br /> h) download link to the results of all of the test frames</p>
+<p>Note that the executable/source code should include pre-trained models or necessary parameters so that we could run it and reproduce results. There should be a README or descriptions that explain how to execute the executable/code. Factsheet must be a compiled pdf file. Please provide a detailed explanation.</p>
+    </main>
+    <footer></footer>
+  </body>
+</html>
