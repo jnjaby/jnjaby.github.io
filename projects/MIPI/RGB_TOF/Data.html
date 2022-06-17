@@ -1,84 +1,134 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-  </head>
-  <body>
-    <header></header>
-    <main>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <header></header>
+  <main>
     <h2>Data Overview</h2>
-<p>The <a href="https://drive.google.com/file/d/1OkuUhlv5i5EIh5y7bgYTt_5ZRGF__1aT/view?usp=sharing"> training data</a> contains 7 image sequences of aligned RGB and ground-truth dense depth from 7 indoor scenes. For each scene, the RGB and the ground-truth depth are rendered along a smooth trajectory in our created 3D virtual environment. RGB and dense depth images in the training set have resolution of 640x480 pixels.</p>
-<p>The testing data contains</p>
-<ol type="1">
-<li>A synthetic image sequence (500 pairs of RGB and depth in total) rendered from an indoor virtual environment that different from the training data.</li>
-<li>48 image sequences of both static and dynamic scenes (1200 pairs of RGB and depth in total) collected from a iPhone 12Pro.</li>
-<li>24 image sequences of static scenes (600 pairs of RGB and depth in total) collected from a modified phone.</li>
-</ol>
-<p>RGB and dense depth images in the testing set have resolution of 256x192 pixels. RGB and spot depth data from the testing set are provided and the GT depth are not available to participants. The depth data in both training and testing sets are in meters.</p>
-<h2>Data Processing</h2>
-<p>Participants can load the data from a "data.list" file in both training and testing data folders.<br /> For loading and visualizing the data, please refer to <a href="https://drive.google.com/file/d/1FLN3wtwfdINCHh6kJdUhBeOMaiE1cWcR/view?usp=sharing"> source code</a>.<br /> <br /> <img style="vertical-align: bottom;" src="https://raw.githubusercontent.com/jnjaby/mipi_assets/main/assets/RGBD/data_visualization.png" alt="Smiley face" width="550" height="160" /></p>
-<h2>Data Download</h2>
-<ul>
-<li>RGB+ToF Depth Completion Training Images <a href="https://drive.google.com/file/d/1OkuUhlv5i5EIh5y7bgYTt_5ZRGF__1aT/view?usp=sharing"> [Google Drive, ~18GB]</a></li>
-<li>RGB+ToF Depth Completion Validation Images <a href="https://drive.google.com/file/d/13hdstLpsp8uMfkwYYCmlJwKd-a4Ed719/view?usp=sharing"> [Google Drive]</a></li>
-<li>RGB+ToF Depth Completion Testing Images (input) (will be available at tesing phase)</li>
-</ul>
-<h2>Pre-requirements</h2>
-<p>The proposed algorithms are required to be enable to <strong>&nbsp;process the data in real-time, i.e. more than 30 frame per second.</strong>&nbsp;</p>
-<h2>Submission Requirements</h2>
-<p>For submitting the results, you need to follow these steps:</p>
-<ol type="1">
-<li><strong>&nbsp;Process the input images</strong>&nbsp; using the "data.list" file along with each data set. The predicted depth data should be saved <strong>as a format of '.exr' with float32 precision.</strong>
-<p>A &nbsp;<strong>"data.list" file</strong>&nbsp; is also required for recording the file names of these results. Please refer to the test function of <a href="https://drive.google.com/file/d/1VNTowhbffD8a-rK6cLLb_mX84s5yneNo/view?usp=sharing"><strong>[our baseline code]</strong></a> for saving results and generating the "data.list".</p>
-The format of the submitted results should be as follow, note that <strong>all directories/files in bold should have the exact same names.</strong>
-<h4 id="tree_label">Results</h4>
-<ul>
-<li><span> <strong>iPhone_static</strong> </span>
-<ul>
-<li class="doc"><strong>data.list</strong></li>
-<li class="doc">result_1.exr</li>
-<li class="doc">result_2.exr</li>
-<li class="doc">......</li>
-</ul>
-</li>
-<li><span> <strong>iPhone_dynamic</strong> </span>
-<ul>
-<li class="doc"><strong>data.list</strong></li>
-<li class="doc">result_1.exr</li>
-<li class="doc">result_2.exr</li>
-<li class="doc">......</li>
-</ul>
-</li>
-<li><span> <strong>modified_phone_static</strong> </span>
-<ul>
-<li class="doc"><strong>data.list</strong></li>
-<li class="doc">result_1.exr</li>
-<li class="doc">result_2.exr</li>
-<li class="doc">......</li>
-</ul>
-</li>
-<li><span> <strong>synthetic</strong> </span>
-<ul>
-<li class="doc"><strong>data.list</strong></li>
-<li class="doc">result_1.exr</li>
-<li class="doc">result_2.exr</li>
-<li class="doc">......</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>A&nbsp;<strong>readme.txt</strong>&nbsp;file should contain the following lines filled in with the runtime per image (in seconds) of the solution, the number of model parameters, and 1 or 0 if employs extra data for training the models or not.<br /><code>Runtime per image [s] : <span>0.025</span></code>&nbsp;<br /><code>Parameters :&nbsp;<span>1050290</span></code><br /><code>Extra Data [1] / No Extra Data [0] : 1</code><br /><code>Other description :&nbsp;<span>GPU: Titan Xp; CPU: Intel Core i7-5500U etc. Extra data: DF2K</span>&nbsp;</code><br />The last part of the file can have any description you want about the code producing the provided results (dependencies, link, scripts, etc.)<br />The provided information is very important both during the validation period when different teams can compare their results / solutions but also for establishing the final ranking of the teams and their methods.</li>
-<li>Create a&nbsp;<strong>ZIP</strong>&nbsp;archive containing all the output image results named as above and a&nbsp;<strong>readme.txt</strong>. Note that the archive should not include folders, all the images/files should be in the root of the archive.</li>
-</ol>
-<p>We recommend you use our <a href="https://codalab.lisn.upsaclay.fr/my/datasets/download/f8a9bb10-727d-4877-8534-97547383182f"> [scoring program]</a> to check your submission is correct.</p>
-<h2>Final Submission</h2>
-<p>Participants will need to submit results on Codalab server. The submission format is the same as in the validation phase. Please find details of submission format in the <strong>evaluation section</strong> of the competition.</p>
-<p>Apart from submission on Codalab server, all participants should email to the challenge organizer <a href="mailto:mipi.challenge@gmail.com"> mipi.challenge@gmail.com</a> to complete the final submission.</p>
-<p>The subject of the email should be: RGB+ToF Depth Completion MIPI-Challenge - TEAM_NAME</p>
-<p>The body of the mail shall include the following information:<br /> a) the challenge name<br /> b) team name<br /> c) team leader's name and email address<br /> d) rest of the team members<br /> e) team name and user names on RGB+ToF Depth Completion CodaLab competitions<br /> f) executable/source code attached or download links<br /> g) Each team in the final testing phase should write up a factsheet to describe their solution(s) <a href="https://codalab.lisn.upsaclay.fr/my/datasets/download/f1f13084-00d4-4ed5-8250-7763102e93d3"> [factsheet template]</a><br /> h) download link to the results of all of the test frames</p>
-<p>Note that the executable/source code should include pre-trained models or necessary parameters so that we could run it and reproduce results. There should be a README or descriptions that explain how to execute the executable/code. Factsheet must be a compiled pdf file. Please provide a detailed explanation.</p>
-    </main>
-    <footer></footer>
-  </body>
+    <p>The <a href="https://drive.google.com/file/d/1OkuUhlv5i5EIh5y7bgYTt_5ZRGF__1aT/view?usp=sharing"> training
+        data</a>
+      contains 7
+      image sequences of aligned RGB and ground-truth dense depth from 7 indoor scenes.
+      For each scene, the RGB and the ground-truth depth are rendered along a smooth trajectory in our created 3D
+      virtual
+      environment. RGB and dense depth images in the training set have resolution of 640x480 pixels.</p>
+    <p>The testing data contains</p>
+    <ol type="1">
+      <li>A synthetic image sequence (500 pairs of RGB and depth in total) rendered from an indoor virtual environment
+        that different from the training data.</li>
+      <li>48 image sequences of both static and dynamic scenes (1200 pairs of RGB and depth in total) collected from a
+        iPhone 12Pro.</li>
+      <li>24 image sequences of static scenes (600 pairs of RGB and depth in total) collected from a modified phone.
+      </li>
+
+    </ol>
+    <p> RGB and dense depth images in the testing set have resolution of 256x192 pixels.
+      RGB and spot depth data from the testing set are provided and the GT depth are not available to participants.
+      The depth data in both training and testing sets are in meters. </p>
+    <h2>Data Processing</h2>
+    Participants can load the data from a "data.list" file in both training and testing data folders.<br />
+
+    For loading and visualizing the data, please refer to <a
+      href="https://drive.google.com/file/d/1FLN3wtwfdINCHh6kJdUhBeOMaiE1cWcR/view?usp=sharing"> source code</a>.<br />
+    <br /> <img style="vertical-align: bottom;"
+      src="https://raw.githubusercontent.com/jnjaby/mipi_assets/main/assets/RGBD/data_visualization.png"
+      alt="Smiley face" width="550" height="160" /></p>
+    <h2>Data Download</h2>
+    <ul>
+      <li>RGB+ToF Depth Completion Training Images <a
+          href="https://drive.google.com/file/d/1OkuUhlv5i5EIh5y7bgYTt_5ZRGF__1aT/view?usp=sharing"> [Google Drive,
+          ~18GB]</a></li>
+      <li>RGB+ToF Depth Completion Validation Images <a
+          href="https://drive.google.com/file/d/13hdstLpsp8uMfkwYYCmlJwKd-a4Ed719/view?usp=sharing"> [Google Drive]</a>
+      </li>
+      <li>RGB+ToF Depth Completion Testing Images (input) (will be available at tesing phase)</li>
+    </ul>
+
+    <h2>Submission Requirements</h2>
+    <p>For submitting the results, you need to follow these steps:</p>
+    <ol type="1">
+      <li><strong>&nbsp;Process the input images</strong>&nbsp; using the "data.list" file along with each data set. The
+        predicted depth data should be saved <strong>as a format of '.exr' with float32 precision.</strong>
+        <p>A &nbsp;<strong>"data.list" file</strong>&nbsp; is also required for recording the file names of these
+          results. Please refer to the test function of <a
+            href="https://drive.google.com/file/d/1VNTowhbffD8a-rK6cLLb_mX84s5yneNo/view?usp=sharing"><strong>[our
+              baseline code]</strong></a> for saving results and generating the "data.list".</p>
+        The format of the submitted results should be as follow, note that <strong>all directories/files in bold should
+          have the exact same names.</strong>
+        <h4 id="tree_label">Results</h4>
+        <ul>
+          <li><span> <strong>iPhone_static</strong> </span>
+            <ul>
+              <li class="doc"><strong>data.list</strong></li>
+              <li class="doc">result_1.exr</li>
+              <li class="doc">result_2.exr</li>
+              <li class="doc">......</li>
+            </ul>
+          </li>
+          <li><span> <strong>iPhone_dynamic</strong> </span>
+            <ul>
+              <li class="doc"><strong>data.list</strong></li>
+              <li class="doc">result_1.exr</li>
+              <li class="doc">result_2.exr</li>
+              <li class="doc">......</li>
+            </ul>
+          </li>
+          <li><span> <strong>modified_phone_static</strong> </span>
+            <ul>
+              <li class="doc"><strong>data.list</strong></li>
+              <li class="doc">result_1.exr</li>
+              <li class="doc">result_2.exr</li>
+              <li class="doc">......</li>
+            </ul>
+          </li>
+          <li><span> <strong>synthetic</strong> </span>
+            <ul>
+              <li class="doc"><strong>data.list</strong></li>
+              <li class="doc">result_1.exr</li>
+              <li class="doc">result_2.exr</li>
+              <li class="doc">......</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>A&nbsp;<strong>readme.txt</strong>&nbsp;file should contain the following lines filled in with the runtime per
+        image (in seconds) of the solution, the number of model parameters, and 1 or 0 if employs extra data for
+        training the models or
+        not.<br /><code>Runtime per image [s] : <span>0.025</span></code>&nbsp;<br /><code>Parameters :&nbsp;<span>1050290</span></code><br /><code>Extra Data [1] / No Extra Data [0] : 1</code><br /><code>Other description :&nbsp;<span>GPU: Titan Xp; CPU: Intel Core i7-5500U etc. Extra data: DF2K</span>&nbsp;</code><br />The
+        last part of the file can have any description you want about the code producing the provided results
+        (dependencies, link, scripts, etc.)<br />The provided information is very important both during the validation
+        period when different teams can compare their results / solutions but also for establishing the final ranking of
+        the teams and their methods.</li>
+      <li>Create a&nbsp;<strong>ZIP</strong>&nbsp;archive containing all the output image results named as above and
+        a&nbsp;<strong>readme.txt</strong>. Note that the archive should not include folders, all the images/files
+        should be in the root of the archive.</li>
+    </ol>
+    <p>We recommend you use our <a
+        href="https://codalab.lisn.upsaclay.fr/my/datasets/download/f8a9bb10-727d-4877-8534-97547383182f"> [scoring
+        program]</a> to check your submission is correct.</p>
+    <h2>Final Submission</h2>
+    <p>Participants will need to submit results on Codalab server. The submission format is the same as in the
+      validation phase. Please find details of submission format in the <strong>evaluation section</strong> of the
+      competition.</p>
+    <p>Apart from submission on Codalab server, all participants should email to the challenge organizer <a
+        href="mailto:mipi.challenge@gmail.com"> mipi.challenge@gmail.com</a> to complete the final submission.</p>
+    <p>The subject of the email should be: RGB+ToF Depth Completion MIPI-Challenge - TEAM_NAME</p>
+    <p>The body of the mail shall include the following information:<br /> a) the challenge name<br /> b) team
+      name<br /> c) team leader's name and email address<br /> d) rest of the team members<br /> e) team name and user
+      names on RGB+ToF Depth Completion CodaLab competitions<br /> f) executable/source code attached or download
+      links<br /> g) Each team in the final testing phase should write up a factsheet to describe their solution(s) <a
+        href="https://codalab.lisn.upsaclay.fr/my/datasets/download/f1f13084-00d4-4ed5-8250-7763102e93d3"> [factsheet
+        template]</a><br /> h) download link to the results of all of the test frames</p>
+    <p>Note that the executable/source code should include pre-trained models or necessary parameters so that we could
+      run it and reproduce results. There should be a README or descriptions that explain how to execute the
+      executable/code. Factsheet must be a compiled pdf file. Please provide a detailed explanation.</p>
+  </main>
+  <footer></footer>
+</body>
+
 </html>
